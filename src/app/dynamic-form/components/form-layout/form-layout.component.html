@@ -1,0 +1,7 @@
+<div *ngIf="FormGroup && configForm">
+  <p>{{configForm.title}}</p>
+  <form (ngSubmit)="onSubmit()" [formGroup]="FormGroup" novalidate>
+    <app-form-section [configForm]="configForm" [FormGroup]="FormGroup"></app-form-section>
+    <button mat-raised-button type="submit">Submit</button>
+  </form>
+</div>
