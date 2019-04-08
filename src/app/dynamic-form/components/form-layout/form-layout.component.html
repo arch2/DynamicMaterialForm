@@ -1,7 +1,10 @@
-<div *ngIf="FormGroup && configForm">
-  <p>{{configForm.title}}</p>
-  <form (ngSubmit)="onSubmit()" [formGroup]="FormGroup" novalidate>
-    <app-form-section [configForm]="configForm" [FormGroup]="FormGroup"></app-form-section>
-    <button mat-raised-button type="submit">Submit</button>
-  </form>
-</div>
+<form *ngIf="FormGroup && configForm" (ngSubmit)="onSubmit()" [formGroup]="FormGroup" novalidate>
+  <mat-toolbar color="secondary">
+    <mat-toolbar-row>
+      <button mat-button routerLink="/">{{configForm.title}}</button>
+      <span class="flex-field"></span>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <app-form-section [configForm]="configForm" [FormGroup]="FormGroup"></app-form-section>
+</form>

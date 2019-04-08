@@ -1,9 +1,10 @@
 <mat-sidenav-container fullscreen>
     <mat-sidenav mode="side" #sidenav>Helpful info</mat-sidenav>
     <mat-sidenav-content>
-        <mat-toolbar>
+        <mat-toolbar color="primary">
             <mat-toolbar-row>
                 <button mat-button (click)="sidenav.toggle()">Material Tester</button>
+                <span class="flex-field"></span>
                 <button mat-button routerLink="/">Home</button>
             </mat-toolbar-row>
         </mat-toolbar>

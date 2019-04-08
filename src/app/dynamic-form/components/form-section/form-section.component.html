@@ -1,47 +1,13 @@
-<p>
-  form-section works!
-</p>
-<button (click)="dontload = !dontload">Reply</button>
-<div *ngIf="FormGroup && configForm && dontload==true">
-  <!-- <mat-horizontal-stepper [formArrayName]="configForm.formName" [linear]="false"> -->
+<div *ngIf="FormGroup && configForm">
   <mat-horizontal-stepper [formGroup]="FormGroup" [linear]="false">
-    <!-- <mat-step formGroupName="0" [stepControl]="formArray.get([0])">
-    <div>
-      <button mat-button matStepperNext type="button">Next</button>
-    </div>
-  </mat-step>
-  <mat-step formGroupName="1" [stepControl]="formArray.get([1])">
-    <div>
-      <button mat-button matStepperPrevious type="button">Back</button>
-      <button mat-button matStepperNext type="button">Next</button>
-    </div>
-  </mat-step> -->
-
-    <!-- <mat-step *ngFor="let section of configForm.Sections; let i = index" [formGroupName]="section.formId" [stepControl]="formArray?.get([i])"> -->
-    <!-- <mat-step *ngFor="let section of configForm.sections; let i = index" [formGroupName]="section.formGrouping" [stepControl]="FormGroup.get(section.formGrouping)"> -->
-    <!-- <mat-step *ngFor="let section of configForm.sections; let i = index" [formGroupName]="getSectionFormGroupName(section)" [stepControl]="getSectionFormGroupName(section)"> -->
-    <mat-step *ngFor="let section of configForm.sections; let i = index" [stepControl]="getSectionFormGroupName(section)">
-
+    <mat-step *ngFor="let section of configForm.sections; let i = index" [stepControl]="this.configForm.formName + '.' + section.formGrouping">
       <ng-template matStepLabel>{{section.sectionTitle}}</ng-template>
-      <!--cards here-->
-      <!-- <card-form [card]="section.cards" [form]="formGroup"></card-form> -->
-      {{section.cards[0].cardTitle}}
-      <app-form-card></app-form-card>
+      <!-- <mat-grid-list [cols]="section.sectionGridColumns" [rowHeight]="section.sectionGridRows">
+        <mat-grid-tile *ngFor="let card of section.cards" [colspan]="card.columns" [rowspan]="card.rows">
+          <app-form-card [card]="card" [formGroup]="FormGroup"></app-form-card>
+        </mat-grid-tile>
+      </mat-grid-list> -->
+      <app-form-card *ngFor="let card of section.cards" [card]="card" [formGroup]="FormGroup"></app-form-card>
     </mat-step>
   </mat-horizontal-stepper>
 </div>
-<!-- <div *ngIf="formGroup && Sections">
-  <form class="formwidth" (ngSubmit)="onSubmit()" [formGroup]="formGroup" novalidate>
-    <mat-tab-group dynamicHeight>
-      <mat-tab [label]="section.sectionTitle" *ngFor="let section of Sections; let i = index">
-        <card-form [card]="section.cards" [form]="formGroup"></card-form>
-      </mat-tab>
-    </mat-tab-group>
-    <mat-card class="card-buffer">
-      <mat-card-title>Save/Submit</mat-card-title>
-      <mat-card-content>
-        <button type="submit" mat-raised-button>Submit</button>
-      </mat-card-content>
-    </mat-card>
-  </form>
-</div> -->

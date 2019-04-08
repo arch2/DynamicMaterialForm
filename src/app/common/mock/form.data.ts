@@ -16,9 +16,9 @@ export const FORM_DATA: ConfigForm =
                 {
                     cardTitle: "Card Title",
                     cardStyling: "",
-                    columns: 4,
-                    rows: 4,
-                    cardRows: "4:3",
+                    columns: 2,
+                    rows: 2,
+                    cardRows: "2:1",
                     cardColumns: 4,
                     fields: [
                         {
@@ -88,9 +88,9 @@ export const FORM_DATA: ConfigForm =
                 {
                     cardTitle: "Card 2",
                     cardStyling: "",
-                    columns: 4,
-                    rows: 4,
-                    cardRows: "4:3",
+                    columns: 2,
+                    rows: 2,
+                    cardRows: "2:1",
                     cardColumns: 4,
                     fields: [
                         {
@@ -152,7 +152,7 @@ export const FORM_DATA: ConfigForm =
                     cardStyling: "",
                     columns: 4,
                     rows: 4,
-                    cardRows: "4:3",
+                    cardRows: "2:1",
                     cardColumns: 4,
                     fields: [
                         {
