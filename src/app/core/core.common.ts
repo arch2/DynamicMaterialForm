@@ -2,9 +2,11 @@ import { ControlDateComponent } from './components';
 import { CommonModule } from '@angular/common';
 import { ValidationService } from './services';
 import { DataLoadService } from './services/data-load.service';
+import { SharedModule } from '../shared';
 
 export const IMPORTED_MODULES: any = [
-    CommonModule
+    CommonModule,
+    SharedModule
 ];
 export const COMPONENT_DECLARATIONS: any[] = [
     ControlDateComponent,

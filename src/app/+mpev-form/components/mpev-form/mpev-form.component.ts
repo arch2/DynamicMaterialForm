@@ -15,7 +15,10 @@ export class MpevFormComponent implements OnInit {
   ngOnInit() {
     this.dataService.getMpevConfig()
       .subscribe(
-        x => { this.configForm = x; console.log(this.configForm) }
+        x => {
+          this.configForm = x;
+          //console.log(this.configForm) 
+        }
       );
   }
   FormSubmit(form: FormGroup) {

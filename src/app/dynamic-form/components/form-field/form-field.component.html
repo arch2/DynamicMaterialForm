@@ -1,3 +1,10 @@
-<p>
-  {{field.label}} : {{field.value}}
-</p>
+<!-- <div [ngSwitch]="field.controlType" class="switch" fxLayout="row wrap" fxLayoutAlign="space-between center" [formGroup]="formGroup"> -->
+
+<div [ngSwitch]="field.controlType" class="switch">
+  <!-- <f-checkbox *ngSwitchCase="'checkbox'" [dataProvider]="question" [form]="formGroup"></f-checkbox>
+  <f-date-time-picker *ngSwitchCase="'datetimepicker'" [dataProvider]="question" [form]="formGroup"></f-date-time-picker>
+  <f-dropdown *ngSwitchCase="'dropdown'" [dataProvider]="question" [form]="formGroup"></f-dropdown>
+  <f-textbox *ngSwitchCase="'textbox'" [dataProvider]="question" [form]="formGroup"></f-textbox> -->
+  <c-control-date *ngSwitchCase="'datetimepicker'" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName"></c-control-date>
+  <p *ngSwitchDefault>{{field.label}} : {{field.value}}</p>
+</div>

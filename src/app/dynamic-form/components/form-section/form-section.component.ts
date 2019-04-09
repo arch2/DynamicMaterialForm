@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ConfigForm } from 'src/app/common';
+import { ConfigForm, Section } from 'src/app/common';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -13,5 +13,11 @@ export class FormSectionComponent implements OnInit {
   constructor() { }
   ngOnInit() {
     //console.log(this.FormGroup.get('TestForm.Test1'));
+
+  }
+  getFormGroup(section: Section) {
+    const fg = this.FormGroup.get(this.configForm.formName).get(section.formGrouping);
+    //console.log(fg);
+    return fg;
   }
 }

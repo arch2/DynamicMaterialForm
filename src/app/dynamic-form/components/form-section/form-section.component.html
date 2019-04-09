@@ -1,13 +1,13 @@
 <div *ngIf="FormGroup && configForm">
   <mat-horizontal-stepper [formGroup]="FormGroup" [linear]="false">
-    <mat-step *ngFor="let section of configForm.sections; let i = index" [stepControl]="this.configForm.formName + '.' + section.formGrouping">
+    <mat-step *ngFor="let section of configForm.sections; let i = index" [formGroupName]="this.configForm.formName" [stepControl]="section.formGrouping">
       <ng-template matStepLabel>{{section.sectionTitle}}</ng-template>
       <!-- <mat-grid-list [cols]="section.sectionGridColumns" [rowHeight]="section.sectionGridRows">
         <mat-grid-tile *ngFor="let card of section.cards" [colspan]="card.columns" [rowspan]="card.rows">
           <app-form-card [card]="card" [formGroup]="FormGroup"></app-form-card>
         </mat-grid-tile>
       </mat-grid-list> -->
-      <app-form-card *ngFor="let card of section.cards" [card]="card" [formGroup]="FormGroup"></app-form-card>
+      <app-form-card *ngFor="let card of section.cards" [card]="card" [FormGroup]="getFormGroup(section)" [FormGroupName]="section.formGrouping"></app-form-card>
     </mat-step>
   </mat-horizontal-stepper>
 </div>

@@ -1,9 +1,11 @@
 import { FormLayoutComponent, FormCardComponent, FormSectionComponent, FormFieldComponent } from './components';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared';
+import { CoreModule } from '../core';
 
 export const IMPORTED_MODULES: any = [
     CommonModule,
+    CoreModule,
     SharedModule
 ];
 export const COMPONENT_DECLARATIONS: any[] = [

@@ -32,7 +32,7 @@ export const FORM_DATA: ConfigForm =
                             rows: 1,
                             columns: 1,
                             validations: [
-                                { validationType: "required", validationValue: true }
+                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
                             ]
                         },
                         {
@@ -46,7 +46,7 @@ export const FORM_DATA: ConfigForm =
                             rows: 1,
                             columns: 1,
                             validations: [
-                                { validationType: "required", validationValue: true }
+                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
                             ]
                         },
                         {
@@ -66,7 +66,7 @@ export const FORM_DATA: ConfigForm =
                                 { key: "+", value: "+" }
                             ],
                             validations: [
-                                { validationType: "required", validationValue: true }
+                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
                             ]
                         },
                         {
@@ -80,7 +80,7 @@ export const FORM_DATA: ConfigForm =
                             rows: 1,
                             columns: 1,
                             validations: [
-                                { validationType: "required", validationValue: true }
+                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
                             ]
                         }
                     ]
@@ -104,7 +104,7 @@ export const FORM_DATA: ConfigForm =
                             rows: 1,
                             columns: 1,
                             validations: [
-                                { validationType: "required", validationValue: true }
+                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
                             ]
                         },
                         {
@@ -118,7 +118,7 @@ export const FORM_DATA: ConfigForm =
                             rows: 1,
                             columns: 1,
                             validations: [
-                                { validationType: "required", validationValue: true }
+                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
                             ]
                         },
                         {
@@ -132,7 +132,7 @@ export const FORM_DATA: ConfigForm =
                             rows: 1,
                             columns: 1,
                             validations: [
-                                { validationType: "required", validationValue: true }
+                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
                             ]
                         }
                     ]
@@ -166,7 +166,7 @@ export const FORM_DATA: ConfigForm =
                             rows: 1,
                             columns: 1,
                             validations: [
-                                { validationType: "required", validationValue: true }
+                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
                             ]
                         }
                     ]

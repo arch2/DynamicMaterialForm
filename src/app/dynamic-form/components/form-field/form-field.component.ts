@@ -9,10 +9,13 @@ import { Field } from 'src/app/common';
 })
 export class FormFieldComponent implements OnInit {
   @Input() field: Field;
+  @Input() FormGroupName: string;
   @Input() FormGroup: FormGroup;
   constructor() { }
 
   ngOnInit() {
+    // console.log("Field:");
+    // console.log(this.FormGroup);
   }
 
 }

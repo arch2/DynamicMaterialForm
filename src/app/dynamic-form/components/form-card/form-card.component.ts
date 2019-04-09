@@ -9,6 +9,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class FormCardComponent implements OnInit {
   @Input() card: Card;
+  @Input() FormGroupName: string;
   @Input() FormGroup: FormGroup;
   constructor() { }
 

@@ -42,7 +42,6 @@ import { CdkTreeModule } from '@angular/cdk/tree';
 import { A11yModule } from '@angular/cdk/a11y';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { CoreModule } from '../core';
 
 const MATERIAL_MODULES: any = [
     A11yModule,
@@ -90,7 +89,6 @@ const MATERIAL_MODULES: any = [
 export const SHARED_MODULES: any = [
     CommonModule,
     FormsModule,
-    CoreModule,
     ReactiveFormsModule,
     ...MATERIAL_MODULES
 ];
@@ -99,7 +97,6 @@ export const COMPONENT_DECLARATIONS: any[] = [];
 
 export const COMPONENT_EXPORTS: any[] = [
     FormsModule,
-    CoreModule,
     ReactiveFormsModule,
     ...MATERIAL_MODULES
 ];

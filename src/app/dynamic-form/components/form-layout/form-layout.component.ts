@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
-import { Section, ConfigForm } from 'src/app/common';
+import { Section, ConfigForm, Validation } from 'src/app/common';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -74,19 +74,19 @@ export class FormLayoutComponent implements OnInit {
   //     // this.ConfigureEvents(formGroup, formSection);
   //     return formGroup;
   // }
-  private mapValidators(validators: any) {
+  private mapValidators(validators: Validation[]) {
     const formValidators = [];
 
     if (validators) {
-      for (const validation of Object.keys(validators)) {
-        if (validation === 'required') {
+      for (const validation of validators) {
+        if (validation.validationType === 'required') {
           formValidators.push(Validators.required);
         }
-        if (validation === 'minLength') {
-          formValidators.push(Validators.min(validators[validation]));
-        }
-        if (validation === 'pattern') {
-          formValidators.push(Validators.pattern(validators[validation]));
+        // if (validation.validationType === 'minLength') {
+        //   formValidators.push(Validators.min(validators[validation.validationValue]));
+        // }
+        if (validation.validationType === 'pattern') {
+          formValidators.push(Validators.pattern(validators[validation.validationMessage]));
         }
       }
     }
