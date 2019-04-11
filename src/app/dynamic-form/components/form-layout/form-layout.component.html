@@ -6,5 +6,12 @@
       <button mat-raised-button color="primary" type="submit">Submit</button>
     </mat-toolbar-row>
   </mat-toolbar>
-  <app-form-section [configForm]="configForm" [FormGroup]="FormGroup"></app-form-section>
+  <app-form-section [configForm]="configForm" [FormGroup]="FormGroup" (sectionButtonClick)="sectionButtonClick($event)"></app-form-section>
+  <mat-toolbar color="warning" *ngIf="payLoad">
+    <mat-toolbar-row>
+      <div class="form-row">
+        <strong>Saved the following values</strong><br>{{payLoad}}
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
 </form>

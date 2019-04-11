@@ -3,19 +3,17 @@ import { Field } from 'src/app/common';
 import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'c-control-date',
-  templateUrl: './control-date.component.html',
-  styleUrls: ['./control-date.component.scss']
+  selector: 'c-control-textbox',
+  templateUrl: './control-textbox.component.html',
+  styleUrls: ['./control-textbox.component.scss']
 })
-export class ControlDateComponent implements OnInit {
+export class ControlTextboxComponent implements OnInit {
   @Input() field: Field;
   @Input() FormGroupName: string;
   @Input() FormGroup: FormGroup;
   constructor() { }
 
   ngOnInit() {
-    // console.log("Date");
-    //console.log(this.FormGroup);
   }
   fieldInvalidTouched() {
     return this.FormGroup.get(this.field.key).invalid && this.FormGroup.get(this.field.key).touched;

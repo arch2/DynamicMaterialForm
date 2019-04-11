@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { SHARED_MODULES } from './app.common';
+import { SHARED_MODULES, GLOBAL_PROVIDERS } from './app.common';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,7 @@ import { SHARED_MODULES } from './app.common';
     BrowserModule,
     ...SHARED_MODULES
   ],
-  providers: [],
+  providers: [GLOBAL_PROVIDERS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

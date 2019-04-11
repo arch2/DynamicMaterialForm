@@ -11,6 +11,7 @@ export class FormLayoutComponent implements OnInit {
   @Output() formSubmitted = new EventEmitter<any>();
   @Input() configForm: ConfigForm;
   FormGroup: FormGroup;
+  payLoad: string;
   constructor() { }
 
   ngOnInit() {
@@ -18,7 +19,11 @@ export class FormLayoutComponent implements OnInit {
   }
 
   onSubmit() {
+    this.payLoad = JSON.stringify(this.FormGroup.value);
     this.formSubmitted.emit(this.FormGroup);
+  }
+  sectionButtonClick($event: any) {
+
   }
   FormToFormGroup(configuredForm: ConfigForm) {
     let sectionGroup: any = {};
@@ -85,6 +90,9 @@ export class FormLayoutComponent implements OnInit {
         // if (validation.validationType === 'minLength') {
         //   formValidators.push(Validators.min(validators[validation.validationValue]));
         // }
+        if (validation.validationType === 'email') {
+          formValidators.push(Validators.email);
+        }
         if (validation.validationType === 'pattern') {
           formValidators.push(Validators.pattern(validators[validation.validationMessage]));
         }

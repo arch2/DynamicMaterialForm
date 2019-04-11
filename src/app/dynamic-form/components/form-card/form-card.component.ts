@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Card } from 'src/app/common';
 import { FormGroup } from '@angular/forms';
 
@@ -11,9 +11,12 @@ export class FormCardComponent implements OnInit {
   @Input() card: Card;
   @Input() FormGroupName: string;
   @Input() FormGroup: FormGroup;
+  @Output() cardButtonClick = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
   }
-
+  fieldButtonClick($event: any) {
+    this.cardButtonClick.emit($event);
+  }
 }

@@ -1,10 +1,4 @@
-<!-- <p>
-  form-card works!
-</p> -->
-<!-- <app-control-date></app-control-date> -->
-<!-- <app-form-card [card]="field" [formGroup]="FormGroup"></app-form-card> -->
-
-<!-- <mat-card class="card-class">
+<!-- <mat-card class="card-class" color="accent">
   <mat-card-header>
     <mat-card-title>{{card.cardTitle}}</mat-card-title>
     <mat-card-subtitle>Dog Breed</mat-card-subtitle>
@@ -17,9 +11,15 @@
     </p>
     <mat-grid-list [cols]="card.cardColumns" [rowHeight]="card.cardRows">
       <mat-grid-tile *ngFor="let field of card.fields" [colspan]="field.columns" [rowspan]="field.rows">
-        <p>{{field.label}} : {{field.value}}</p>
+        <app-form-field *ngFor="let field of card.fields" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName"></app-form-field>
       </mat-grid-tile>
     </mat-grid-list>
+    <app-form-field *ngFor="let field of card.fields" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName" (fieldButtonClick)="fieldButtonClick($event)"></app-form-field>
   </mat-card-content>
 </mat-card> -->
-<app-form-field *ngFor="let field of card.fields" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName"></app-form-field>
+<mat-toolbar color="secondary">
+  <mat-toolbar-row>
+    <button mat-button>{{card.cardTitle}}</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<app-form-field *ngFor="let field of card.fields" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName" (fieldButtonClick)="fieldButtonClick($event)"></app-form-field>

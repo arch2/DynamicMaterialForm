@@ -1,16 +1,19 @@
-import { ConfigForm } from '../models';
+import { ConfigForm, Field } from '../models';
 
 export const FORM_DATA: ConfigForm =
 {
     title: "Hello World",
     formName: "TestForm",
+    // formTheme: "candy-app-theme",
+    formTheme: "",
     sections: [
         {
-            sectionTitle: "Section Test",
+            sectionTitle: "Wheelchair section",
             formGrouping: "Test1",
             sectionStyling: "",
             sectionGridColumns: 4,
             sectionGridRows: "4:3",
+            validationMessage: "This Section is Required",
             formId: 0,
             cards: [
                 {
@@ -25,15 +28,13 @@ export const FORM_DATA: ConfigForm =
                             controlType: "checkbox",
                             key: "IsWheelchair",
                             label: "Wheelchair",
-                            value: "0",
+                            value: "true",
                             order: 1,
                             visible: true,
                             disabled: false,
                             rows: 1,
                             columns: 1,
-                            validations: [
-                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
-                            ]
+                            validations: []
                         },
                         {
                             controlType: "datetimepicker",
@@ -53,17 +54,17 @@ export const FORM_DATA: ConfigForm =
                             controlType: "dropdown",
                             key: "stuStatus",
                             label: "Reg. Status",
-                            value: "A",
+                            value: "",
                             order: 2,
                             visible: true,
                             disabled: false,
                             rows: 1,
                             columns: 1,
                             options: [
-                                { key: "A", value: "A" },
-                                { key: "C", value: "C" },
-                                { key: "I", value: "I" },
-                                { key: "+", value: "+" }
+                                { key: "A", value: "Approved" },
+                                { key: "C", value: "Closed" },
+                                { key: "I", value: "Incomplete" },
+                                { key: "+", value: "Needs more" }
                             ],
                             validations: [
                                 { validationType: "required", validationValue: true, validationMessage: "This field is required" }
@@ -71,16 +72,17 @@ export const FORM_DATA: ConfigForm =
                         },
                         {
                             controlType: "textbox",
-                            key: "stuGradeLevel",
-                            label: "Grade Level",
-                            value: "Test",
+                            key: "email",
+                            label: "Email",
+                            value: "Test 1",
                             order: 4,
                             visible: true,
                             disabled: false,
                             rows: 1,
                             columns: 1,
                             validations: [
-                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
+                                { validationType: "required", validationValue: true, validationMessage: "This field is required" },
+                                { validationType: "email", validationValue: true, validationMessage: "This is not a valid email" }
                             ]
                         }
                     ]
@@ -103,9 +105,7 @@ export const FORM_DATA: ConfigForm =
                             disabled: false,
                             rows: 1,
                             columns: 1,
-                            validations: [
-                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
-                            ]
+                            validations: []
                         },
                         {
                             controlType: "datetimepicker",
@@ -123,9 +123,9 @@ export const FORM_DATA: ConfigForm =
                         },
                         {
                             controlType: "textbox",
-                            key: "stuGradeLevel",
+                            key: "stuGradeLevel 2",
                             label: "Grade Level",
-                            value: "Test2",
+                            value: "Test 2",
                             order: 4,
                             visible: true,
                             disabled: false,
@@ -134,17 +134,24 @@ export const FORM_DATA: ConfigForm =
                             validations: [
                                 { validationType: "required", validationValue: true, validationMessage: "This field is required" }
                             ]
-                        }
+                        },
+                        new Field({
+                            controlType: "button",
+                            key: "button",
+                            label: "Next Section",
+                            value: "next"
+                        })
                     ]
                 }
             ],
         },
         {
-            sectionTitle: "Section 2 Test",
+            sectionTitle: "Date Section",
             formGrouping: "Test2",
             sectionStyling: "",
             sectionGridColumns: 4,
             sectionGridRows: "4:3",
+            validationMessage: "There is one field missing",
             formId: 1,
             cards: [
                 {
@@ -168,7 +175,19 @@ export const FORM_DATA: ConfigForm =
                             validations: [
                                 { validationType: "required", validationValue: true, validationMessage: "This field is required" }
                             ]
-                        }
+                        },
+                        new Field({
+                            controlType: "button",
+                            key: "button",
+                            label: "Previous Section",
+                            value: "previous"
+                        }),
+                        new Field({
+                            controlType: "button",
+                            key: "Submit",
+                            label: "Submit",
+                            value: "submit"
+                        })
                     ]
                 }
             ]
