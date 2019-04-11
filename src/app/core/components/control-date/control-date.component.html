@@ -1,5 +1,5 @@
 <div [formGroup]="FormGroup">
-  <mat-form-field>
+  <mat-form-field class="form-full-width">
     <input matInput [matDatepicker]="picker" [placeholder]="field.label" [id]="field.key" [formControlName]="field.key">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>

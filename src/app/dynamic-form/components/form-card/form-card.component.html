@@ -17,9 +17,17 @@
     <app-form-field *ngFor="let field of card.fields" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName" (fieldButtonClick)="fieldButtonClick($event)"></app-form-field>
   </mat-card-content>
 </mat-card> -->
-<mat-toolbar color="secondary">
+<!-- <mat-toolbar color="secondary">
   <mat-toolbar-row>
     <button mat-button>{{card.cardTitle}}</button>
   </mat-toolbar-row>
-</mat-toolbar>
-<app-form-field *ngFor="let field of card.fields" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName" (fieldButtonClick)="fieldButtonClick($event)"></app-form-field>
+</mat-toolbar> -->
+<mat-grid-list [cols]="section.sectionGridColumns" [rowHeight]="section.sectionGridRows">
+  <mat-grid-tile *ngFor="let card of section.cards" [colspan]="card.columns" [rowspan]="card.rows">
+    <mat-grid-tile-header>{{card.cardTitle}}</mat-grid-tile-header>
+    <!-- <app-form-card [card]="card" [FormGroup]="getFormGroup(section)" [FormGroupName]="section.formGrouping" (cardButtonClick)="cardButtonClick($event)"></app-form-card> -->
+    <div class="app-form-field-wrapper">
+      <app-form-field *ngFor="let field of card.fields" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName" (fieldButtonClick)="fieldButtonClick($event)" class="app-form-field"></app-form-field>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

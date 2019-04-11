@@ -1,8 +1,9 @@
-<mat-form-field [formGroup]="FormGroup">
+<mat-form-field [formGroup]="FormGroup" class="form-full-width">
   <mat-select [placeholder]="field.label" [formControlName]="field.key">
     <mat-option *ngFor="let item of field.options" [value]="item.key">
       {{item.value}}
     </mat-option>
   </mat-select>
+  <mat-icon matSuffix>visibility</mat-icon>
   <mat-error *ngIf="fieldInvalidTouched()">{{getErrorMessage()}}</mat-error>
 </mat-form-field>

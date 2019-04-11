@@ -1,4 +1,80 @@
-import { ConfigForm, Field } from '../models';
+import { ConfigForm, Field, Validation, Card, Section } from '../models';
+import { Option } from '../models/model.option';
+
+
+const exampleCard: Card = new Card({
+    cardTitle: "Card Title",
+    cardStyling: "",
+    columns: 1,
+    rows: 1,
+    cardRows: "2:1",
+    cardColumns: 4,
+    fields: [
+        new Field({
+            controlType: "checkbox",
+            key: "IsWheelchair",
+            label: "Wheelchair",
+            value: "true",
+            order: 1,
+            visible: true,
+            disabled: false,
+            rows: 1,
+            columns: 1,
+            validations: []
+        }),
+        new Field({
+            controlType: "datetimepicker",
+            key: "StartDate",
+            label: "Start",
+            value: "05/26/1980",
+            order: 3,
+            visible: true,
+            disabled: false,
+            rows: 1,
+            columns: 1,
+            validations: [
+                new Validation({ validationType: "required", validationValue: true, validationMessage: "This field is required" })
+            ]
+        }),
+        new Field({
+            controlType: "dropdown",
+            key: "stuStatus",
+            label: "Reg. Status",
+            value: "",
+            order: 2,
+            visible: true,
+            disabled: false,
+            rows: 1,
+            columns: 1,
+            options: [
+                new Option({ key: "A", value: "Approved" }),
+                new Option({ key: "C", value: "Closed" }),
+                new Option({ key: "I", value: "Incomplete" }),
+                new Option({ key: "+", value: "Needs more" })
+            ],
+            validations: [
+                new Validation({ validationType: "required", validationValue: true, validationMessage: "This field is required" })
+            ]
+        }),
+        new Field({
+            controlType: "textbox",
+            key: "email",
+            label: "Email",
+            value: "Test 1",
+            order: 4,
+            visible: true,
+            disabled: false,
+            rows: 1,
+            columns: 1,
+            validations: [
+                new Validation({ validationType: "required", validationValue: true, validationMessage: "This field is required" }),
+                new Validation({ validationType: "email", validationValue: true, validationMessage: "This is not a valid email" })
+            ]
+        })
+    ]
+});
+
+
 
 export const FORM_DATA: ConfigForm =
 {
@@ -7,7 +83,7 @@ export const FORM_DATA: ConfigForm =
     // formTheme: "candy-app-theme",
     formTheme: "",
     sections: [
-        {
+        new Section({
             sectionTitle: "Wheelchair section",
             formGrouping: "Test1",
             sectionStyling: "",
@@ -16,86 +92,16 @@ export const FORM_DATA: ConfigForm =
             validationMessage: "This Section is Required",
             formId: 0,
             cards: [
-                {
-                    cardTitle: "Card Title",
+                exampleCard,
+                new Card({
+                    cardTitle: "Longo Cardo",
                     cardStyling: "",
                     columns: 2,
                     rows: 2,
                     cardRows: "2:1",
                     cardColumns: 4,
                     fields: [
-                        {
-                            controlType: "checkbox",
-                            key: "IsWheelchair",
-                            label: "Wheelchair",
-                            value: "true",
-                            order: 1,
-                            visible: true,
-                            disabled: false,
-                            rows: 1,
-                            columns: 1,
-                            validations: []
-                        },
-                        {
-                            controlType: "datetimepicker",
-                            key: "StartDate",
-                            label: "Start",
-                            value: "05/26/1980",
-                            order: 3,
-                            visible: true,
-                            disabled: false,
-                            rows: 1,
-                            columns: 1,
-                            validations: [
-                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
-                            ]
-                        },
-                        {
-                            controlType: "dropdown",
-                            key: "stuStatus",
-                            label: "Reg. Status",
-                            value: "",
-                            order: 2,
-                            visible: true,
-                            disabled: false,
-                            rows: 1,
-                            columns: 1,
-                            options: [
-                                { key: "A", value: "Approved" },
-                                { key: "C", value: "Closed" },
-                                { key: "I", value: "Incomplete" },
-                                { key: "+", value: "Needs more" }
-                            ],
-                            validations: [
-                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
-                            ]
-                        },
-                        {
-                            controlType: "textbox",
-                            key: "email",
-                            label: "Email",
-                            value: "Test 1",
-                            order: 4,
-                            visible: true,
-                            disabled: false,
-                            rows: 1,
-                            columns: 1,
-                            validations: [
-                                { validationType: "required", validationValue: true, validationMessage: "This field is required" },
-                                { validationType: "email", validationValue: true, validationMessage: "This is not a valid email" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    cardTitle: "Card 2",
-                    cardStyling: "",
-                    columns: 2,
-                    rows: 2,
-                    cardRows: "2:1",
-                    cardColumns: 4,
-                    fields: [
-                        {
+                        new Field({
                             controlType: "checkbox",
                             key: "IsChair",
                             label: "Chair",
@@ -106,8 +112,8 @@ export const FORM_DATA: ConfigForm =
                             rows: 1,
                             columns: 1,
                             validations: []
-                        },
-                        {
+                        }),
+                        new Field({
                             controlType: "datetimepicker",
                             key: "EndDate",
                             label: "End",
@@ -118,10 +124,10 @@ export const FORM_DATA: ConfigForm =
                             rows: 1,
                             columns: 1,
                             validations: [
-                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
+                                new Validation({ validationType: "required", validationValue: true, validationMessage: "This field is required" })
                             ]
-                        },
-                        {
+                        }),
+                        new Field({
                             controlType: "textbox",
                             key: "stuGradeLevel 2",
                             label: "Grade Level",
@@ -132,9 +138,65 @@ export const FORM_DATA: ConfigForm =
                             rows: 1,
                             columns: 1,
                             validations: [
-                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
+                                new Validation({ validationType: "required", validationValue: true, validationMessage: "This field is required" })
                             ]
-                        },
+                        }),
+                        new Field({
+                            controlType: "textbox",
+                            key: "tester",
+                            label: "Space tester",
+                            value: "Vabuuuu",
+                            order: 4,
+                            visible: true,
+                            disabled: false,
+                            rows: 1,
+                            columns: 1,
+                            validations: [
+                                new Validation({ validationType: "required", validationValue: true, validationMessage: "This field is required" })
+                            ]
+                        }),
+                        new Field({
+                            controlType: "textbox",
+                            key: "tester2",
+                            label: "Space tester2",
+                            value: "Yabuuuu",
+                            order: 4,
+                            visible: true,
+                            disabled: false,
+                            rows: 1,
+                            columns: 1,
+                            validations: [
+                                new Validation({ validationType: "required", validationValue: true, validationMessage: "This field is required" })
+                            ]
+                        }),
+                        new Field({
+                            controlType: "textbox",
+                            key: "tester3",
+                            label: "Space tester3",
+                            value: "Agoooooo",
+                            order: 4,
+                            visible: true,
+                            disabled: false,
+                            rows: 1,
+                            columns: 1,
+                            validations: [
+                                new Validation({ validationType: "required", validationValue: true, validationMessage: "This field is required" })
+                            ]
+                        }),
+                        new Field({
+                            controlType: "textbox",
+                            key: "tester4",
+                            label: "Space tester4",
+                            value: "tatooooo",
+                            order: 4,
+                            visible: true,
+                            disabled: false,
+                            rows: 1,
+                            columns: 1,
+                            validations: [
+                                new Validation({ validationType: "required", validationValue: true, validationMessage: "This field is required" })
+                            ]
+                        }),
                         new Field({
                             controlType: "button",
                             key: "button",
@@ -142,10 +204,12 @@ export const FORM_DATA: ConfigForm =
                             value: "next"
                         })
                     ]
-                }
+                }),
+                exampleCard,
+                exampleCard
             ],
-        },
-        {
+        }),
+        new Section({
             sectionTitle: "Date Section",
             formGrouping: "Test2",
             sectionStyling: "",
@@ -154,15 +218,15 @@ export const FORM_DATA: ConfigForm =
             validationMessage: "There is one field missing",
             formId: 1,
             cards: [
-                {
+                new Card({
                     cardTitle: "Second Tab Card",
                     cardStyling: "",
-                    columns: 4,
-                    rows: 4,
+                    columns: 2,
+                    rows: 1,
                     cardRows: "2:1",
                     cardColumns: 4,
                     fields: [
-                        {
+                        new Field({
                             controlType: "datetimepicker",
                             key: "TestDate",
                             label: "Test",
@@ -173,9 +237,9 @@ export const FORM_DATA: ConfigForm =
                             rows: 1,
                             columns: 1,
                             validations: [
-                                { validationType: "required", validationValue: true, validationMessage: "This field is required" }
+                                new Validation({ validationType: "required", validationValue: true, validationMessage: "This field is required" })
                             ]
-                        },
+                        }),
                         new Field({
                             controlType: "button",
                             key: "button",
@@ -189,8 +253,8 @@ export const FORM_DATA: ConfigForm =
                             value: "submit"
                         })
                     ]
-                }
+                })
             ]
-        }
+        })
     ]
 };

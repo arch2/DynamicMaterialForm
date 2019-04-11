@@ -1,9 +1,9 @@
 <!-- <div [ngSwitch]="field.controlType" class="switch" fxLayout="row wrap" fxLayoutAlign="space-between center" [formGroup]="formGroup"> -->
 <div [ngSwitch]="field.controlType" class="switch">
-  <c-control-checkbox *ngSwitchCase="'checkbox'" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName"></c-control-checkbox>
-  <c-control-dropdown *ngSwitchCase="'dropdown'" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName"></c-control-dropdown>
-  <c-control-textbox *ngSwitchCase="'textbox'" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName"></c-control-textbox>
-  <c-control-date *ngSwitchCase="'datetimepicker'" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName"></c-control-date>
-  <c-control-button *ngSwitchCase="'button'" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName" (buttonClick)="buttonClick($event)"></c-control-button>
+  <c-control-checkbox *ngSwitchCase="'checkbox'" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName" class="c-control-checkbox"></c-control-checkbox>
+  <c-control-dropdown *ngSwitchCase="'dropdown'" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName" class="c-control-dropdown"></c-control-dropdown>
+  <c-control-textbox *ngSwitchCase="'textbox'" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName" class="c-control-textbox"></c-control-textbox>
+  <c-control-date *ngSwitchCase="'datetimepicker'" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName" class="c-control-date"></c-control-date>
+  <c-control-button *ngSwitchCase="'button'" [field]="field" [FormGroup]="FormGroup" [FormGroupName]="FormGroupName" (buttonClick)="buttonClick($event)" class="c-control-button"></c-control-button>
   <p *ngSwitchDefault>missing type : {{field.label}} : {{field.value}}</p>
 </div>

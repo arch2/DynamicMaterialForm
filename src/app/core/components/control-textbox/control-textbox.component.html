@@ -1,6 +1,7 @@
-<div fxLayout="row wrap" fxLayoutAlign="space-between center" [formGroup]="FormGroup">
-  <mat-form-field class="example-full-width">
-    <input matInput [placeholder]="field.label" [formControlName]="field.key">
-    <mat-error *ngIf="fieldInvalidTouched()">{{getErrorMessage()}}</mat-error>
-  </mat-form-field>
-</div>
+<!-- <div fxLayout="row wrap" fxLayoutAlign="space-between center" > -->
+<mat-form-field class="form-full-width" [formGroup]="FormGroup">
+  <input matInput [placeholder]="field.label" [formControlName]="field.key">
+  <mat-icon matSuffix>edit</mat-icon>
+  <mat-error *ngIf="fieldInvalidTouched()">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+<!-- </div> -->

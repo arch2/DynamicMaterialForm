@@ -33,3 +33,19 @@ $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 .flex-field {
     flex: 1;
 }
+
+.form-full-width {
+    width: 100%;
+}
+
+.app-form-field {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.app-form-field-wrapper {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
