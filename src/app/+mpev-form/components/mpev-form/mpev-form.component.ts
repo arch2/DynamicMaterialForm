@@ -17,7 +17,7 @@ export class MpevFormComponent implements OnInit {
       .subscribe(
         x => {
           this.configForm = x;
-          //console.log(this.configForm) 
+          console.log(this.configForm)
         }
       );
   }

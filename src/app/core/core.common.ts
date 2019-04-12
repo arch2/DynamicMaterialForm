@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ValidationService } from './services';
 import { DataLoadService } from './services/data-load.service';
 import { SharedModule } from '../shared';
+import { HttpClientModule } from '@angular/common/http';
 
 export const IMPORTED_MODULES: any = [
     CommonModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
 ];
 export const COMPONENT_DECLARATIONS: any[] = [
     ControlDateComponent,

@@ -1,0 +1,154 @@
+{
+    "title": "Hello World",
+    "formName": "TestForm",
+    "formTheme": "",
+    "sections": [
+        {
+            "sectionTitle": "Wheelchair section",
+            "formGrouping": "Test1",
+            "sectionStyling": "",
+            "sectionGridColumns": 6,
+            "sectionGridrows": "4:3",
+            "validationMessage": "This Section is Required",
+            "formId": 0,
+            "cards": [
+                {
+                    "cardTitle": "Longo Cardo",
+                    "cardStyling": "",
+                    "columns": 6,
+                    "rows": 2,
+                    "cardZ": "2:1",
+                    "card": 4,
+                    "fields": [
+                        {
+                            "controlType": "checkbox",
+                            "key": "IsChair",
+                            "label": "Chair",
+                            "value": 0,
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": []
+                        },
+                        {
+                            "controlType": "datetimepicker",
+                            "key": "EndDate",
+                            "label": "End",
+                            "value": "05/26/1980",
+                            "order": 3,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "stuGradeLevel 2",
+                            "label": "Grade Level",
+                            "value": "Test 2",
+                            "order": 4,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "tester",
+                            "label": "Space tester",
+                            "value": "Vabuuuu",
+                            "order": 4,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "tester2",
+                            "label": "Space tester2",
+                            "value": "Yabuuuu",
+                            "order": 4,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "tester3",
+                            "label": "Space tester3",
+                            "value": "Agoooooo",
+                            "order": 4,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "tester4",
+                            "label": "Space tester4",
+                            "value": "tatooooo",
+                            "order": 4,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "button",
+                            "key": "button",
+                            "label": "Next Section",
+                            "value": "next"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

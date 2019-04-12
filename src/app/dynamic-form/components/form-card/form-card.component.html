@@ -23,7 +23,7 @@
   </mat-toolbar-row>
 </mat-toolbar> -->
 <mat-grid-list [cols]="section.sectionGridColumns" [rowHeight]="section.sectionGridRows">
-  <mat-grid-tile *ngFor="let card of section.cards" [colspan]="card.columns" [rowspan]="card.rows">
+  <mat-grid-tile *ngFor="let card of section.cards" [colspan]="card.columns" [rowspan]="card.rows" class="mat-grid-tile-selector">
     <mat-grid-tile-header>{{card.cardTitle}}</mat-grid-tile-header>
     <!-- <app-form-card [card]="card" [FormGroup]="getFormGroup(section)" [FormGroupName]="section.formGrouping" (cardButtonClick)="cardButtonClick($event)"></app-form-card> -->
     <div class="app-form-field-wrapper">

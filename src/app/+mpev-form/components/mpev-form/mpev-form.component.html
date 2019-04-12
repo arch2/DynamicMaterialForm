@@ -1,6 +1,3 @@
-<!-- <p>
-  mpev-form works!
-</p> -->
-<app-form-layout [configForm]="configForm" (formSubmitted)="FormSubmit($event)"></app-form-layout>
-
-{{configForm.value}}
+<div *ngIf="configForm">
+    <app-form-layout [configForm]="configForm" (formSubmitted)="FormSubmit($event)"></app-form-layout>
+</div>

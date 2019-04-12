@@ -1,18 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { FORM_DATA, ConfigForm } from 'src/app/common';
+import { MPEV_CONFIG, ConfigForm, VIOLATION_DATA } from 'src/app/common';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataLoadService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getMpevConfig(): Observable<ConfigForm> {
-    return of(FORM_DATA);
+  getMpevConfig(): Observable<any> {
+    //return of(MPEV_CONFIG);
+    return this.http.get('assets/mpev_config.json');
   }
-  getViolationsConfig(): Observable<ConfigForm> {
-    return of(FORM_DATA);
+  getViolationsConfig(): Observable<any> {
+    //return of(VIOLATION_DATA);
+    return this.http.get('assets/violation_config.json');
   }
 }
