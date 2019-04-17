@@ -1,0 +1,556 @@
+{
+    "title": "OPV Form",
+    "formName": "OPVForm",
+    "formTheme": "",
+    "sections": [
+        {
+            "sectionTitle": "First section",
+            "formGrouping": "Test1",
+            "sectionStyling": "",
+            "sectionGridColumns": 2,
+            "sectionGridrows": "4:3",
+            "validationMessage": "This Section is Required",
+            "formId": 0,
+            "cards": [
+                {
+                    "cardTitle": "Longo Cardo",
+                    "cardStyling": "",
+                    "columns": 2,
+                    "rows": 3,
+                    "cardZ": "2:1",
+                    "card": 12,
+                    "fields": [
+                        {
+                            "controlType": "textbox",
+                            "key": "Subject",
+                            "label": "Subject",
+                            "value": "Subject",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "ViolationNr",
+                            "label": "ViolationNr",
+                            "value": "ViolationNr",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "InspectionNr",
+                            "label": "InspectionNr",
+                            "value": "InspectionNr",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "InspectionDate",
+                            "label": "InspectionDate",
+                            "value": "",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "RRCoName",
+                            "label": "RRCoName",
+                            "value": "RRCoName",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "RRCoCode",
+                            "label": "RRCoCode",
+                            "value": "RRCoCode",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "INSPECTOR",
+                            "label": "INSPECTOR",
+                            "value": "INSPECTOR",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "InspectorNr",
+                            "label": "InspectorNr",
+                            "value": "InspectorNr",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "FromCity",
+                            "label": "FromCity",
+                            "value": "FromCity",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "FromCityName",
+                            "label": "FromCityName",
+                            "value": "FromCityName",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "FromState",
+                            "label": "FromState",
+                            "value": "FromState",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "FromStateName",
+                            "label": "FromStateName",
+                            "value": "FromStateName",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "ViolationDate",
+                            "label": "ViolationDate",
+                            "value": "",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "ViolationTime",
+                            "label": "ViolationTime",
+                            "value": "ViolationTime",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "OperationFacility",
+                            "label": "OperationFacility",
+                            "value": "OperationFacility",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "Division",
+                            "label": "Division",
+                            "value": "Division",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "TrackNameNr",
+                            "label": "TrackNameNr",
+                            "value": "TrackNameNr",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "EquipInitNr",
+                            "label": "EquipInitNr",
+                            "value": "EquipInitNr",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "TrainID",
+                            "label": "TrainID",
+                            "value": "TrainID",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "ViolationNarrative",
+                            "label": "ViolationNarrative",
+                            "value": "ViolationNarrative",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "ViolationRptDate",
+                            "label": "ViolationRptDate",
+                            "value": "",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "RrNotifyTime",
+                            "label": "RrNotifyTime",
+                            "value": "RrNotifyTime",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "RrNotifyDate",
+                            "label": "RrNotifyDate",
+                            "value": "",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "RrNotifyName",
+                            "label": "RrNotifyName",
+                            "value": "RrNotifyName",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "RrNotifyTitle",
+                            "label": "RrNotifyTitle",
+                            "value": "RrNotifyTitle",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "UploadDate",
+                            "label": "UploadDate",
+                            "value": "",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "UploadTime",
+                            "label": "UploadTime",
+                            "value": "UploadTime",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "ViolationStatus",
+                            "label": "ViolationStatus",
+                            "value": "ViolationStatus",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "textbox",
+                            "key": "Errors",
+                            "label": "Errors",
+                            "value": "Errors",
+                            "order": 1,
+                            "visible": true,
+                            "disabled": false,
+                            "rows": 1,
+                            "columns": 1,
+                            "validations": [
+                                {
+                                    "validationType": "required",
+                                    "validationValue": true,
+                                    "validationMessage": "This field is required"
+                                }
+                            ]
+                        },
+                        {
+                            "controlType": "button",
+                            "key": "Submit",
+                            "label": "Submit",
+                            "value": "submit"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

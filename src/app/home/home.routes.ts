@@ -13,5 +13,9 @@ export const HomeRoutes: Routes = [
     {
         path: 'violations',
         loadChildren: '../+violations-form/violations-form.module#ViolationsFormModule'
+    },
+    {
+        path: 'opv',
+        loadChildren: '../+opv-form/opv-form.module#OpvFormModule'
     }
 ];

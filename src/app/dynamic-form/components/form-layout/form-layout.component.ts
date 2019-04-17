@@ -31,6 +31,7 @@ export class FormLayoutComponent implements OnInit {
       let group: any = {};
       section.cards.forEach(card => {
         card.fields.forEach(field => {
+          if (field.controlType == "button") { return; }
           if (field.controlType == "datetimepicker") { field.value = new Date(field.value) };
           group[field.key] = new FormControl({ value: field.value || '', disabled: field.disabled }, this.mapValidators(field.validations));
         })
