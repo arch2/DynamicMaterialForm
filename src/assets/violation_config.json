@@ -142,9 +142,9 @@
                         },
                         {
                             "controlType": "button",
-                            "key": "button",
-                            "label": "Next Section",
-                            "value": "next"
+                            "key": "Submit",
+                            "label": "Submit",
+                            "value": "submit"
                         }
                     ]
                 }

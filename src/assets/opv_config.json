@@ -75,10 +75,10 @@
                             ]
                         },
                         {
-                            "controlType": "textbox",
+                            "controlType": "datetimepicker",
                             "key": "InspectionDate",
                             "label": "InspectionDate",
-                            "value": "",
+                            "value": "04/24/1998",
                             "order": 1,
                             "visible": true,
                             "disabled": false,
@@ -237,10 +237,10 @@
                             ]
                         },
                         {
-                            "controlType": "textbox",
+                            "controlType": "datetimepicker",
                             "key": "ViolationDate",
                             "label": "ViolationDate",
-                            "value": "",
+                            "value": "03/23/2003",
                             "order": 1,
                             "visible": true,
                             "disabled": false,
@@ -381,10 +381,10 @@
                             ]
                         },
                         {
-                            "controlType": "textbox",
+                            "controlType": "datetimepicker",
                             "key": "ViolationRptDate",
                             "label": "ViolationRptDate",
-                            "value": "",
+                            "value": "04/24/2004",
                             "order": 1,
                             "visible": true,
                             "disabled": false,
@@ -417,10 +417,10 @@
                             ]
                         },
                         {
-                            "controlType": "textbox",
+                            "controlType": "datetimepicker",
                             "key": "RrNotifyDate",
                             "label": "RrNotifyDate",
-                            "value": "",
+                            "value": "01/01/2001",
                             "order": 1,
                             "visible": true,
                             "disabled": false,
@@ -471,10 +471,10 @@
                             ]
                         },
                         {
-                            "controlType": "textbox",
+                            "controlType": "datetimepicker",
                             "key": "UploadDate",
                             "label": "UploadDate",
-                            "value": "",
+                            "value": "02/22/2005",
                             "order": 1,
                             "visible": true,
                             "disabled": false,

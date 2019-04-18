@@ -28,13 +28,13 @@ export class DataLoadService {
   }
   submitOpvForm(SPName: string, form: any): Observable<any> {
     // const url = "http://localhost:64578/Test";
-    const url = "/Test";
+    const url = "/Test/Tester";
     //  environment.api_endpoint +
     // AppSettings.API_CONTROLLER_ENDPOINT +
     // AppSettings.REGISTER_CONTROLLER,
     return this.http.post<any>(
       url,
-      { "SPName": SPName, "values": form },
+      { "SPName": SPName, "values": JSON.stringify(form) },
       this.httpOptions);
   }
 }

@@ -10,7 +10,9 @@
   <mat-toolbar color="warning" *ngIf="payLoad">
     <mat-toolbar-row>
       <div class="form-row">
-        <strong>Saved the following values</strong><br>{{payLoad}}
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Saved the following values" [value]="payLoad">
+        </mat-form-field>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>

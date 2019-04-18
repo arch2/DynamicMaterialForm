@@ -56,3 +56,11 @@ $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
     justify-content: flex-start !important;
     align-items: flex-start !important;
 }
+
+.form-row {
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
