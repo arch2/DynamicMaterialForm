@@ -23,7 +23,7 @@
                         {
                             "controlType": "textbox",
                             "key": "Subject",
-                            "label": "Subject",
+                            "label": "1. Subject",
                             "value": "Subject",
                             "order": 1,
                             "visible": true,
@@ -34,18 +34,18 @@
                                 {
                                     "validationType": "required",
                                     "validationValue": true,
-                                    "validationMessage": "This field is required"
+                                    "validationMessage": "#045 SUBJECT MUST BE ENTERED"
                                 }
                             ]
                         },
                         {
                             "controlType": "textbox",
                             "key": "ViolationNr",
-                            "label": "ViolationNr",
+                            "label": "2. ViolationNr",
                             "value": "ViolationNr",
                             "order": 1,
                             "visible": true,
-                            "disabled": false,
+                            "disabled": true,
                             "rows": 1,
                             "columns": 1,
                             "validations": [
@@ -59,11 +59,11 @@
                         {
                             "controlType": "textbox",
                             "key": "InspectionNr",
-                            "label": "InspectionNr",
+                            "label": "3. InspectionNr",
                             "value": "InspectionNr",
                             "order": 1,
                             "visible": true,
-                            "disabled": false,
+                            "disabled": true,
                             "rows": 1,
                             "columns": 1,
                             "validations": [
@@ -77,11 +77,11 @@
                         {
                             "controlType": "datetimepicker",
                             "key": "InspectionDate",
-                            "label": "InspectionDate",
+                            "label": "3. InspectionDate",
                             "value": "04/24/1998",
                             "order": 1,
                             "visible": true,
-                            "disabled": false,
+                            "disabled": true,
                             "rows": 1,
                             "columns": 1,
                             "validations": [
@@ -95,7 +95,7 @@
                         {
                             "controlType": "textbox",
                             "key": "RRCoName",
-                            "label": "RRCoName",
+                            "label": "4. RRCoName",
                             "value": "RRCoName",
                             "order": 1,
                             "visible": true,
@@ -106,14 +106,14 @@
                                 {
                                     "validationType": "required",
                                     "validationValue": true,
-                                    "validationMessage": "This field is required"
+                                    "validationMessage": "#007 RAILROAD/COMPANY NAME MUST BE ENTERED"
                                 }
                             ]
                         },
                         {
                             "controlType": "textbox",
                             "key": "RRCoCode",
-                            "label": "RRCoCode",
+                            "label": "4. RRCoCode",
                             "value": "RRCoCode",
                             "order": 1,
                             "visible": true,
@@ -124,14 +124,14 @@
                                 {
                                     "validationType": "required",
                                     "validationValue": true,
-                                    "validationMessage": "This field is required"
+                                    "validationMessage": "#005 RAILROAD/COMPANY CODE IS BLANK OR INVALID"
                                 }
                             ]
                         },
                         {
                             "controlType": "textbox",
                             "key": "INSPECTOR",
-                            "label": "INSPECTOR",
+                            "label": "5. INSPECTOR",
                             "value": "INSPECTOR",
                             "order": 1,
                             "visible": true,
@@ -149,7 +149,7 @@
                         {
                             "controlType": "textbox",
                             "key": "InspectorNr",
-                            "label": "InspectorNr",
+                            "label": "5. InspectorNr",
                             "value": "InspectorNr",
                             "order": 1,
                             "visible": true,
@@ -167,7 +167,7 @@
                         {
                             "controlType": "textbox",
                             "key": "FromCity",
-                            "label": "FromCity",
+                            "label": "6. FromCity",
                             "value": "FromCity",
                             "order": 1,
                             "visible": true,
@@ -185,7 +185,7 @@
                         {
                             "controlType": "textbox",
                             "key": "FromCityName",
-                            "label": "FromCityName",
+                            "label": "6. FromCityName",
                             "value": "FromCityName",
                             "order": 1,
                             "visible": true,
@@ -203,7 +203,7 @@
                         {
                             "controlType": "textbox",
                             "key": "FromState",
-                            "label": "FromState",
+                            "label": "6. FromState",
                             "value": "FromState",
                             "order": 1,
                             "visible": true,
@@ -221,7 +221,7 @@
                         {
                             "controlType": "textbox",
                             "key": "FromStateName",
-                            "label": "FromStateName",
+                            "label": "6. FromStateName",
                             "value": "FromStateName",
                             "order": 1,
                             "visible": true,
@@ -239,7 +239,7 @@
                         {
                             "controlType": "datetimepicker",
                             "key": "ViolationDate",
-                            "label": "ViolationDate",
+                            "label": "7. ViolationDate",
                             "value": "03/23/2003",
                             "order": 1,
                             "visible": true,
@@ -250,14 +250,14 @@
                                 {
                                     "validationType": "required",
                                     "validationValue": true,
-                                    "validationMessage": "This field is required"
+                                    "validationMessage": "#020, VIOLATION DATE IS BLANK OR IS LATER THAN THE INSPECTION DATE"
                                 }
                             ]
                         },
                         {
                             "controlType": "textbox",
                             "key": "ViolationTime",
-                            "label": "ViolationTime",
+                            "label": "8. ViolationTime",
                             "value": "ViolationTime",
                             "order": 1,
                             "visible": true,
@@ -268,14 +268,14 @@
                                 {
                                     "validationType": "required",
                                     "validationValue": true,
-                                    "validationMessage": "This field is required"
+                                    "validationMessage": "#022 TIME OF VIOLATION MUST BE ENTERED"
                                 }
                             ]
                         },
                         {
                             "controlType": "textbox",
                             "key": "OperationFacility",
-                            "label": "OperationFacility",
+                            "label": "9. OperationFacility",
                             "value": "OperationFacility",
                             "order": 1,
                             "visible": true,
@@ -286,18 +286,18 @@
                                 {
                                     "validationType": "required",
                                     "validationValue": true,
-                                    "validationMessage": "This field is required"
+                                    "validationMessage": "#050 OPERATION/FACILITY MUST BE ENTERED"
                                 }
                             ]
                         },
                         {
                             "controlType": "textbox",
                             "key": "Division",
-                            "label": "Division",
+                            "label": "10. Division",
                             "value": "Division",
                             "order": 1,
                             "visible": true,
-                            "disabled": false,
+                            "disabled": true,
                             "rows": 1,
                             "columns": 1,
                             "validations": [
@@ -311,61 +311,43 @@
                         {
                             "controlType": "textbox",
                             "key": "TrackNameNr",
-                            "label": "TrackNameNr",
+                            "label": "11. TrackNameNr",
                             "value": "TrackNameNr",
                             "order": 1,
                             "visible": true,
                             "disabled": false,
                             "rows": 1,
                             "columns": 1,
-                            "validations": [
-                                {
-                                    "validationType": "required",
-                                    "validationValue": true,
-                                    "validationMessage": "This field is required"
-                                }
-                            ]
+                            "validations": []
                         },
                         {
                             "controlType": "textbox",
                             "key": "EquipInitNr",
-                            "label": "EquipInitNr",
+                            "label": "12. EquipInitNr",
                             "value": "EquipInitNr",
                             "order": 1,
                             "visible": true,
                             "disabled": false,
                             "rows": 1,
                             "columns": 1,
-                            "validations": [
-                                {
-                                    "validationType": "required",
-                                    "validationValue": true,
-                                    "validationMessage": "This field is required"
-                                }
-                            ]
+                            "validations": []
                         },
                         {
                             "controlType": "textbox",
                             "key": "TrainID",
-                            "label": "TrainID",
+                            "label": "13. TrainID",
                             "value": "TrainID",
                             "order": 1,
                             "visible": true,
                             "disabled": false,
                             "rows": 1,
                             "columns": 1,
-                            "validations": [
-                                {
-                                    "validationType": "required",
-                                    "validationValue": true,
-                                    "validationMessage": "This field is required"
-                                }
-                            ]
+                            "validations": []
                         },
                         {
                             "controlType": "textbox",
                             "key": "ViolationNarrative",
-                            "label": "ViolationNarrative",
+                            "label": "15. ViolationNarrative",
                             "value": "ViolationNarrative",
                             "order": 1,
                             "visible": true,
@@ -376,14 +358,14 @@
                                 {
                                     "validationType": "required",
                                     "validationValue": true,
-                                    "validationMessage": "This field is required"
+                                    "validationMessage": "#032 VIOLATION DESCRIPTION MUST BE ENTERED"
                                 }
                             ]
                         },
                         {
                             "controlType": "datetimepicker",
                             "key": "ViolationRptDate",
-                            "label": "ViolationRptDate",
+                            "label": "17. ViolationRptDate",
                             "value": "04/24/2004",
                             "order": 1,
                             "visible": true,
@@ -394,7 +376,7 @@
                                 {
                                     "validationType": "required",
                                     "validationValue": true,
-                                    "validationMessage": "This field is required"
+                                    "validationMessage": "#035 DATE REPORT PREPARED IS BLANK OR IS BEFORE THE INSPECTION DATE"
                                 }
                             ]
                         },
@@ -419,7 +401,7 @@
                         {
                             "controlType": "datetimepicker",
                             "key": "RrNotifyDate",
-                            "label": "RrNotifyDate",
+                            "label": "19. RrNotifyDate",
                             "value": "01/01/2001",
                             "order": 1,
                             "visible": true,
@@ -430,7 +412,7 @@
                                 {
                                     "validationType": "required",
                                     "validationValue": true,
-                                    "validationMessage": "This field is required"
+                                    "validationMessage": "#042 CARRIER NOTIFICATION DATE MUST NOT BE BEFORE THE INSPECTION DATE"
                                 }
                             ]
                         },
