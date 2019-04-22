@@ -250,7 +250,13 @@
                                 {
                                     "validationType": "required",
                                     "validationValue": true,
-                                    "validationMessage": "#020, VIOLATION DATE IS BLANK OR IS LATER THAN THE INSPECTION DATE"
+                                    "validationMessage": "#020, VIOLATION DATE IS BLANK"
+                                },
+                                {
+                                    "validationType": "dateCompare",
+                                    "validationValue": "01/01/2002",
+                                    "validationCompare": ">",
+                                    "validationMessage": "#020, VIOLATION DATE IS LATER THAN THE INSPECTION DATE"
                                 }
                             ]
                         },
@@ -376,7 +382,13 @@
                                 {
                                     "validationType": "required",
                                     "validationValue": true,
-                                    "validationMessage": "#035 DATE REPORT PREPARED IS BLANK OR IS BEFORE THE INSPECTION DATE"
+                                    "validationMessage": "#035 DATE REPORT PREPARED IS BLANK"
+                                },
+                                {
+                                    "validationType": "dateCompare",
+                                    "validationValue": "01/01/2002",
+                                    "validationCompare": "<",
+                                    "validationMessage": "#035 DATE REPORT PREPARED IS BEFORE THE INSPECTION DATE"
                                 }
                             ]
                         },
@@ -412,6 +424,12 @@
                                 {
                                     "validationType": "required",
                                     "validationValue": true,
+                                    "validationMessage": "#042 CARRIER NOTIFICATION DATE IS REQUIRED"
+                                },
+                                {
+                                    "validationType": "dateCompare",
+                                    "validationValue": "01/01/2000",
+                                    "validationCompare": "<",
                                     "validationMessage": "#042 CARRIER NOTIFICATION DATE MUST NOT BE BEFORE THE INSPECTION DATE"
                                 }
                             ]

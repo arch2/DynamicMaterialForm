@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { Section, ConfigForm, Validation } from 'src/app/common';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-form-layout',
@@ -97,10 +97,30 @@ export class FormLayoutComponent implements OnInit {
         if (validation.validationType === 'pattern') {
           formValidators.push(Validators.pattern(validators[validation.validationMessage]));
         }
+        if (validation.validationType === 'dateCompare') {
+          formValidators.push(this.dateCompareValidator(validation));
+        }
       }
     }
 
     return formValidators;
+  }
+  private dateCompareValidator(val: Validation): ValidatorFn {
+    return (control: AbstractControl): { [key: string]: any } | null => {
+      const dt = new Date(control.value);
+      const dtToCompare = new Date(val.validationValue);
+      if (dt) {
+        let forbidden: boolean = false;
+        if (val.validationCompare == "<") {
+          forbidden = dt < dtToCompare;
+        }
+        else if (val.validationCompare == ">") {
+          forbidden = dt > dtToCompare;
+        }
+        return forbidden ? { 'dateCompare': { value: control.value } } : null;
+      }
+      return null;
+    };
   }
   // private ConfigureEvents(formGroup: FormGroup, formSection: FormSection[]) {
   //     formSection.forEach(section => {
