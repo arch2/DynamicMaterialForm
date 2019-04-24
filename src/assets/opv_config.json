@@ -18,7 +18,7 @@
                     "columns": 2,
                     "rows": 3,
                     "cardZ": "2:1",
-                    "card": 12,
+                    "card": 10,
                     "fields": [
                         {
                             "controlType": "textbox",
@@ -414,7 +414,7 @@
                             "controlType": "datetimepicker",
                             "key": "RrNotifyDate",
                             "label": "19. RrNotifyDate",
-                            "value": "01/01/2001",
+                            "value": "01/01/2002",
                             "order": 1,
                             "visible": true,
                             "disabled": false,
@@ -428,8 +428,14 @@
                                 },
                                 {
                                     "validationType": "dateCompare",
-                                    "validationValue": "01/01/2000",
+                                    "validationValue": "01/01/2005",
                                     "validationCompare": "<",
+                                    "validationMessage": "#042 CARRIER NOTIFICATION DATE MUST NOT BE BEFORE THE INSPECTION DATE"
+                                },
+                                {
+                                    "validationType": "dateCompare",
+                                    "validationValue": "01/01/2000",
+                                    "validationCompare": ">",
                                     "validationMessage": "#042 CARRIER NOTIFICATION DATE MUST NOT BE BEFORE THE INSPECTION DATE"
                                 }
                             ]

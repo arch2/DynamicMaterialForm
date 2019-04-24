@@ -123,61 +123,61 @@ export class FormLayoutComponent implements OnInit {
     };
   }
   // private ConfigureEvents(formGroup: FormGroup, formSection: FormSection[]) {
-  //     formSection.forEach(section => {
-  //         section.cards.forEach(card => {
-  //             card.fields.forEach(field => {
-  //                 if (field.dataToLoad && field.controlToTieTo) {
-  //                     formGroup.get(section.id).get(field.key).valueChanges.subscribe(val => this.LoadChildDropDownValues(field.dataToLoad, field.controlToTieTo, val, formGroup, section));
-  //                 }
-  //                 if (field.valueToAddValidator && field.controlToAddValidator) {
-  //                     formGroup.get(section.id).get(field.key).valueChanges.subscribe(val => this.AddRemoveValidator(field.valueToAddValidator, field.controlToAddValidator, val, formGroup, section));
-  //                     this.AddRemoveValidator(field.valueToAddValidator, field.controlToAddValidator, field.value, formGroup, section);
-  //                 }
-  //                 if (field.controlType == ControlType.Formula) {
-  //                     field.options.forEach(fieldToCalculate => {
-  //                         formGroup.get(fieldToCalculate.Name).get(fieldToCalculate.Value).valueChanges.subscribe(val => this.CalculateField(field, formGroup, section));
-  //                     });
-  //                     this.CalculateField(field, formGroup, section);
-  //                 }
-  //             })
-  //         })
-  //     });
+  //   formSection.forEach(section => {
+  //     section.cards.forEach(card => {
+  //       card.fields.forEach(field => {
+  //         if (field.dataToLoad && field.controlToTieTo) {
+  //           formGroup.get(section.id).get(field.key).valueChanges.subscribe(val => this.LoadChildDropDownValues(field.dataToLoad, field.controlToTieTo, val, formGroup, section));
+  //         }
+  //         if (field.valueToAddValidator && field.controlToAddValidator) {
+  //           formGroup.get(section.id).get(field.key).valueChanges.subscribe(val => this.AddRemoveValidator(field.valueToAddValidator, field.controlToAddValidator, val, formGroup, section));
+  //           this.AddRemoveValidator(field.valueToAddValidator, field.controlToAddValidator, field.value, formGroup, section);
+  //         }
+  //         if (field.controlType == ControlType.Formula) {
+  //           field.options.forEach(fieldToCalculate => {
+  //             formGroup.get(fieldToCalculate.Name).get(fieldToCalculate.Value).valueChanges.subscribe(val => this.CalculateField(field, formGroup, section));
+  //           });
+  //           this.CalculateField(field, formGroup, section);
+  //         }
+  //       })
+  //     })
+  //   });
   // }
   // private CalculateField(controlToPutCalculation: FormField<string>, group: FormGroup, section: FormSection) {
-  //     let sum: number = 0;
-  //     controlToPutCalculation.options.forEach(field => {
-  //         if (group.get(field.Name).get(field.Value).value && parseInt(group.get(field.Name).get(field.Value).value)) {
-  //             sum += parseInt(group.get(field.Name).get(field.Value).value);
-  //         }
-  //     });
-  //     group.get(section.id).get(controlToPutCalculation.key).setValue(sum);
+  //   let sum: number = 0;
+  //   controlToPutCalculation.options.forEach(field => {
+  //     if (group.get(field.Name).get(field.Value).value && parseInt(group.get(field.Name).get(field.Value).value)) {
+  //       sum += parseInt(group.get(field.Name).get(field.Value).value);
+  //     }
+  //   });
+  //   group.get(section.id).get(controlToPutCalculation.key).setValue(sum);
   // }
   // private AddRemoveValidator(valueToAddValidator: string, controlToAddValidator: FormField<string>, val: any, group: FormGroup, section: FormSection) {
-  //     if (valueToAddValidator == val) {
-  //         group.get(section.id).get(controlToAddValidator.key).setValidators(this.mapValidators(controlToAddValidator.validation));
-  //     } else {
-  //         group.get(section.id).get(controlToAddValidator.key).setValidators([]);
-  //     }
-  //     group.get(section.id).get(controlToAddValidator.key).updateValueAndValidity();
+  //   if (valueToAddValidator == val) {
+  //     group.get(section.id).get(controlToAddValidator.key).setValidators(this.mapValidators(controlToAddValidator.validation));
+  //   } else {
+  //     group.get(section.id).get(controlToAddValidator.key).setValidators([]);
+  //   }
+  //   group.get(section.id).get(controlToAddValidator.key).updateValueAndValidity();
   // }
   // private clearField(controlToClear: FormField<string>, group: FormGroup, section: FormSection) {
-  //     if (controlToClear) {
-  //         controlToClear.options = null;
-  //         group.get(section.id).get(controlToClear.key).setValue("");
-  //         this.clearField(controlToClear.controlToTieTo, group, section);
-  //     }
+  //   if (controlToClear) {
+  //     controlToClear.options = null;
+  //     group.get(section.id).get(controlToClear.key).setValue("");
+  //     this.clearField(controlToClear.controlToTieTo, group, section);
+  //   }
   // }
   // private LoadChildDropDownValues(dataToLoad: string, actionField: FormField<string>, val: any, group: FormGroup, section: FormSection) {
-  //     this.configService.get_child_dropdown_values(dataToLoad, val).subscribe(
-  //         results => {
-  //             actionField.options = results;
-  //             group.get(section.id).get(actionField.key).setValue("");
-  //             if (actionField.controlToTieTo) {
-  //                 this.clearField(actionField.controlToTieTo, group, section);
-  //             }
-  //         },
-  //         e => console.log(e),
-  //         () => console.log("done loading {0} from service", dataToLoad));
+  //   this.configService.get_child_dropdown_values(dataToLoad, val).subscribe(
+  //     results => {
+  //       actionField.options = results;
+  //       group.get(section.id).get(actionField.key).setValue("");
+  //       if (actionField.controlToTieTo) {
+  //         this.clearField(actionField.controlToTieTo, group, section);
+  //       }
+  //     },
+  //     e => console.log(e),
+  //     () => console.log("done loading {0} from service", dataToLoad));
   // }
 
 }
