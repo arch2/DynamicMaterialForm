@@ -22,7 +22,7 @@ export class OpvFormComponent implements OnInit {
       );
   }
   FormSubmit(form: FormGroup) {
-    this.dataService.submitOpvForm("[ris2].[SetOpStg]", form.get(this.configForm.formName).get(String(this.configForm.sections[0].formGrouping)).value)
+    this.dataService.submitOpvForm("[ris2].[SetOpStg]", (form.get(this.configForm.formName).get(String(this.configForm.sections[0].formGrouping)) as FormGroup).getRawValue())
       .subscribe(
         x => {
           console.log(form.value);

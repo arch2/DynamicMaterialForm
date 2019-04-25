@@ -28,13 +28,18 @@ export class DataLoadService {
   }
   submitOpvForm(SPName: string, form: any): Observable<any> {
     // const url = "http://localhost:64578/Test";
-    const url = "/Test/Tester";
+    // const url = "/Test/Tester";
+    const url = "/api/StoredProcedure/Execute";
     //  environment.api_endpoint +
     // AppSettings.API_CONTROLLER_ENDPOINT +
     // AppSettings.REGISTER_CONTROLLER,
+    // const formstr: string[] = new Array(JSON.stringify(form));
+    // console.log(formstr);
+    // const formNVP = formstr.join(",");
+    // console.log(formNVP);
     return this.http.post<any>(
       url,
-      { "SPName": SPName, "values": JSON.stringify(form) },
+      { "SPName": SPName, "values": form },
       this.httpOptions);
   }
 }
