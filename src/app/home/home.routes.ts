@@ -17,5 +17,9 @@ export const HomeRoutes: Routes = [
     {
         path: 'opv',
         loadChildren: '../+opv-form/opv-form.module#OpvFormModule'
+    },
+    {
+        path: '**',
+        redirectTo: '/home'
     }
 ];

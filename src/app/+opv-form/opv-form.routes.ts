@@ -5,5 +5,9 @@ export const OpvRoutes: Routes = [
     {
         path: '',
         component: OpvFormComponent
+    },
+    {
+        path:':id',
+        component:OpvFormComponent
     }
 ];
